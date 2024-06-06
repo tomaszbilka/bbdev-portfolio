@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import type { MetaFunction } from "@remix-run/node";
+import Header from "~/components/header";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,20 +11,12 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
-  const { t, i18n } = useTranslation("common");
-
-  const currentLng = i18n.language;
-
-  const changeLocaleHandler = () => {
-    i18n.changeLanguage(currentLng === "en" ? "pl" : "en");
-  };
+  const { t } = useTranslation("common");
 
   return (
     <div className="ml-4">
       <span className="text-3xl font-bold underline">{t("welcome")}</span>
-      <button className="block mt-8" onClick={changeLocaleHandler}>
-        {currentLng === "en" ? "PL" : "EN"}
-      </button>
+      <Header />
     </div>
   );
 }

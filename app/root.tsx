@@ -30,7 +30,7 @@ export default function App() {
         <Links />
       </head>
       <body id="app">
-        <I18nextProvider i18n={i18n}>
+        <I18nextProvider i18n={i18n} defaultNS="common">
           <Outlet />
         </I18nextProvider>
         <ScrollRestoration />
