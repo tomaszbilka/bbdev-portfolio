@@ -9,8 +9,10 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Welcome to BBDEV portfolio</h1>
+    <div className="ml-4">
+      <span className="text-3xl font-bold underline">
+        Welcome to BBDEV portfolio
+      </span>
     </div>
   );
 }
