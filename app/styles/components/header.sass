@@ -13,8 +13,11 @@
         border: 1px solid $white
         color: $white
         cursor: pointer
-        font-size: 30px
+        font-size: $font-size-lg
         transition: scale 300ms ease
+
+        +mobile-xs
+            font-size: $font-size-md
 
         &:hover
             scale: 1.05
@@ -40,9 +43,15 @@
     margin-bottom: $s-5
     text-align: center
 
+    +mobile-xs
+        font-size: $font-size-md
+
     &__name
         color: $accent
 
     &__role
         font-size: $font-size-xl
         margin-top: $s-2
+
+        +mobile-xs
+            font-size: $font-size-lg
