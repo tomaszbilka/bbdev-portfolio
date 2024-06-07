@@ -1,0 +1,54 @@
+=mobile-xs
+  @media (min-width: map-get($grid-breakpoints, 'xs'))
+    @content
+    
+=mobile
+  @media (min-width: map-get($grid-breakpoints, 'sm'))
+    @content
+
+=tablet
+  @media (min-width: map-get($grid-breakpoints, 'md'))
+    @content
+
+=desktop
+  @media (min-width: map-get($grid-breakpoints, 'lg'))
+    @content
+
+=desktop-xl
+  @media (min-width: map-get($grid-breakpoints, 'xl'))
+    @content
+    
+=flex_row
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+=flex_col
+    display: flex
+    flex-direction: col
+    justify-content: center
+    align-items: center
+
+=button-primary
+    background-color: $primary
+    border-radius: $s-2
+    border: 1px solid $light
+    color: $white
+    cursor: pointer
+    padding: $s-2 $s-4
+    transition: background-color 300ms ease
+
+    &:hover
+        background-color: $dark
+
+
+//---- ANIMATIONS --------------------------------------------------------------------
+=move
+  @keyframes move
+    0%
+      transform: translateY(0px)
+    50%
+      transform: translateY(6px)
+    100%
+      transform: translateY(0px)

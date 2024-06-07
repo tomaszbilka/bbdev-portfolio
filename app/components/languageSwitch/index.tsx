@@ -11,9 +11,13 @@ const LanguageSwitch = () => {
   };
 
   return (
-    <button className="px-4 py-2 border" onClick={changeLocaleHandler}>
-      {currentLng === "en" ? LOCALE.pl.toUpperCase() : LOCALE.en.toUpperCase()}
-    </button>
+    <div className="switch">
+      <button className="switch__button" onClick={changeLocaleHandler}>
+        {currentLng === "en"
+          ? LOCALE.pl.toUpperCase()
+          : LOCALE.en.toUpperCase()}
+      </button>
+    </div>
   );
 };
 

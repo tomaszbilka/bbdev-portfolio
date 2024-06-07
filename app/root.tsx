@@ -7,14 +7,8 @@ import {
 } from "@remix-run/react";
 import { I18nextProvider } from "react-i18next";
 
-import type { LinksFunction } from "@remix-run/node";
-
-import stylesheet from "~/styles/tailwind.css?url";
 import i18n from "./i18n";
-
-export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: stylesheet },
-];
+import "~/styles/index.sass";
 
 export default function App() {
   return (
