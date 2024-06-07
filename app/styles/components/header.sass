@@ -1,7 +1,7 @@
 +move
 
 .my-header 
-    +flex_row
+    +flex_col
     background-image: url(./assets/images/space.jpg)
     background-size: cover
     height: 100vh
@@ -33,3 +33,19 @@
     border-top-right-radius: $s-2
     color: $primary
     padding: $s-3
+
+.greeting
+    color: $white
+    font-size: $font-size-lg
+    margin-bottom: $s-5
+    text-align: center
+
+    &__name
+        color: $accent
+
+    &__role
+        font-size: $font-size-xl
+        margin-top: $s-2
+
+    &__cursor
+        display: none
