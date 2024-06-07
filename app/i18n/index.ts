@@ -1,13 +1,26 @@
 /* eslint-disable import/no-named-as-default-member */
-import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
+import i18n from "i18next";
 
-import Backend from "i18next-http-backend";
-import LanguageDetector from "i18next-browser-languagedetector";
+import { LOCALE } from "~/components/languageSwitch/constants";
+import en from "./locales/en";
+import pl from "./locales/pl";
 
-i18n.use(Backend).use(LanguageDetector).use(initReactI18next).init({
-  fallbackLng: "en",
-  debug: true,
+export const defaultNS = "common";
+
+export const resources = {
+  en,
+  pl,
+} as const;
+
+i18n.use(initReactI18next).init({
+  compatibilityJSON: "v3",
+  defaultNS,
+  fallbackLng: LOCALE.en,
+  interpolation: { escapeValue: false },
+  lng: LOCALE.en,
+  resources,
+  supportedLngs: [LOCALE.en, LOCALE.pl],
 });
 
 export default i18n;

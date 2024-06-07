@@ -1,0 +1,51 @@
++move
+
+.my-header 
+    +flex_col
+    background-image: url(./assets/images/space.jpg)
+    background-size: cover
+    height: 100vh
+    width: 100vw
+
+    &__container
+        +flex_row
+        border-radius: $s-2
+        border: 1px solid $white
+        color: $white
+        cursor: pointer
+        font-size: 30px
+        transition: scale 300ms ease
+
+        &:hover
+            scale: 1.05
+
+    &__title
+        padding: $s-2 $s-6
+
+    &__arrow-container
+        background-color: $accent
+        border-left: 1px solid $white
+
+.arrows
+    animation: move 1.3s ease 0s infinite
+    background-color: transparent
+    border-bottom-right-radius: $s-2
+    border-top-right-radius: $s-2
+    color: $primary
+    padding: $s-3
+
+.greeting
+    color: $white
+    font-size: $font-size-lg
+    margin-bottom: $s-5
+    text-align: center
+
+    &__name
+        color: $accent
+
+    &__role
+        font-size: $font-size-xl
+        margin-top: $s-2
+
+    &__cursor
+        display: none
