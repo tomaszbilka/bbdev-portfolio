@@ -1,6 +1,8 @@
+import { useRef } from "react";
 import type { MetaFunction } from "@remix-run/node";
 
 import Header from "~/components/header";
+import About from "~/components/about";
 
 export const meta: MetaFunction = () => {
   return [
@@ -10,9 +12,12 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
-      <Header />
+      <Header scrollRef={scrollRef} />
+      <About scrollRef={scrollRef} />
     </>
   );
 }
