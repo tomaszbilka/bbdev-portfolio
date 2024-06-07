@@ -1,21 +1,21 @@
 =mobile-xs
-  @media (min-width: map-get($grid-breakpoints, 'xs'))
+  @media (max-width: map-get($grid-breakpoints, 'xs'))
     @content
     
 =mobile
-  @media (min-width: map-get($grid-breakpoints, 'sm'))
+  @media (max-width: map-get($grid-breakpoints, 'sm'))
     @content
 
 =tablet
-  @media (min-width: map-get($grid-breakpoints, 'md'))
+  @media (max-width: map-get($grid-breakpoints, 'md'))
     @content
 
 =desktop
-  @media (min-width: map-get($grid-breakpoints, 'lg'))
+  @media (max-width: map-get($grid-breakpoints, 'lg'))
     @content
 
 =desktop-xl
-  @media (min-width: map-get($grid-breakpoints, 'xl'))
+  @media (max-width: map-get($grid-breakpoints, 'xl'))
     @content
     
 =flex_row
