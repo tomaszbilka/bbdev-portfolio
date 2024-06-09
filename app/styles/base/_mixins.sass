@@ -19,16 +19,16 @@
     @content
     
 =flex_row
+    align-items: center
     display: flex
     flex-direction: row
     justify-content: center
-    align-items: center
 
 =flex_col
+    align-items: center
     display: flex
     flex-direction: column
     justify-content: center
-    align-items: center
 
 =button-primary
     background-color: $primary
@@ -42,6 +42,19 @@
     &:hover
         background-color: $dark
 
+=hexagon
+    width: 350px
+    height: 300px
+    clip-path: polygon( 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%,  0% 50%  )
+
+    +mobile
+      width: 300px
+      height: 250px
+      transform: scale(0.7)
+
+    +mobile-xs
+      width: 250px
+      height: 200px
 
 //---- ANIMATIONS --------------------------------------------------------------------
 =move
@@ -50,5 +63,29 @@
       transform: translateY(0px)
     50%
       transform: translateY(6px)
+    100%
+      transform: translateY(0px)
+
+=rotate
+  @keyframes rotate 
+    0%
+      transform: rotate(0deg)
+    40%
+      transform: rotate(180deg)
+    60%
+      transform: translateY(150deg)
+    100%
+      transform: translateY(360deg)
+    
+=bounce
+  @keyframes bounce
+    0%
+      transform: translateY(0px)
+    25%
+      transform: translateY(20px)
+    50%
+      transform: translateY(0px)
+    75%
+      transform: translateY(-20px)
     100%
       transform: translateY(0px)

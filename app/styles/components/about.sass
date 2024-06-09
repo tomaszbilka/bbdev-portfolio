@@ -1,2 +1,92 @@
-.about-container
++rotate
+    
+.about-section
+    +flex_col
+    margin: $s-8 auto
+    max-width: 80%
     min-height: 100vh
+
+    +mobile-xs
+        max-width: 95%
+
+.about
+    +flex_row
+    background-color: $light
+    padding: $s-14
+
+    +desktop
+        flex-direction: column
+        flex-wrap: wrap
+
+    +mobile
+        padding: $s-8
+
+    +mobile-xs
+        padding: $s-4
+
+    &__hexagon-container
+        position: relative
+
+    &__hexagon
+        +flex_col
+        +hexagon
+
+        &--img
+            background-image: url("/images/me.jpg")
+            background-position: 50% 5%
+            position: relative
+            z-index: 1
+
+        &--yellow
+            background-color: $accent
+            left: 10%
+            position: absolute
+            scale: 0.8
+            top: 18%
+            z-index: 0
+
+            +mobile
+                left: 5%
+                top: 10%
+
+        &--animation
+            animation: rotate 3s ease 0.4s 
+
+            +mobile
+                animation: none
+        
+    &__text-container
+        color: $white
+        margin-left: $s-8
+        opacity: 0
+        transform: translateY(30%)
+        transition: transform 1s ease,  opacity 1s ease
+
+        +desktop
+            margin-left: 0
+
+    &__text-reveal
+        opacity: 1
+        transform: translateY(0%)
+
+    &__title
+        font-size: $font-size-lg
+
+        +mobile
+            font-size: $font-size-md
+
+        +mobile-xs
+            font-size: $font-size-sm
+
+    &__text
+        font-size: $font-size-md
+        line-height: $s-8
+
+        +mobile
+            font-size: $font-size-xs
+
+        +mobile-xs
+            font-size: $font-size-xxs
+
+    
+
