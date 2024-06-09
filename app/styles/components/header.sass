@@ -5,15 +5,16 @@
     background-image: url(/images/space.jpg) 
     background-size: cover
     height: 100vh
-    width: 100vw
 
     &__container
         +flex_row
+        background-color: transparent
         border-radius: $s-2
         border: 1px solid $white
         color: $white
         cursor: pointer
         font-size: $font-size-lg
+        padding: 0
         transition: scale 300ms ease
 
         +mobile-xs
@@ -27,13 +28,13 @@
 
     &__arrow-container
         background-color: $accent
+        border-bottom-right-radius: $s-2
         border-left: 1px solid $white
+        border-top-right-radius: $s-2
 
 .arrows
     animation: move 1.3s ease 0s infinite
     background-color: transparent
-    border-bottom-right-radius: $s-2
-    border-top-right-radius: $s-2
     color: $primary
     padding: $s-3
 
