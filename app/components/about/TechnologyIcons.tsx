@@ -1,13 +1,14 @@
 import { useRef } from "react";
 import { IoLogoJavascript, IoLogoHtml5, IoLogoCss3 } from "react-icons/io5";
 import {
-  SiSass,
-  SiRemix,
   SiGraphql,
-  SiNestjs,
   SiMui,
+  SiNestjs,
+  SiRemix,
+  SiSass,
   SiTailwindcss,
 } from "react-icons/si";
+import { DiMysql } from "react-icons/di";
 import { FaReact } from "react-icons/fa";
 import useIsVisible from "~/hooks/useIsVisible";
 
@@ -46,6 +47,9 @@ const TechnologyIcons = () => {
       />
       <SiTailwindcss
         className={`icon icon__tailwind ${isVisible ? "icon-animation" : ""}`}
+      />
+      <DiMysql
+        className={`icon icon__sql ${isVisible ? "icon-animation" : ""}`}
       />
     </div>
   );
