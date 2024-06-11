@@ -1,0 +1,87 @@
+.skills-section
+    +section
+    min-width: 100%
+    background-image: url('/images/skills.jpg')
+    background-size: cover
+    padding: $s-14 0
+
+.skills
+    +flex_col
+    background-color: $white
+    border-radius: $s-4
+    overflow: hidden
+    padding: $s-4 $s-8 
+    width: 50%
+
+    +desktop-xl
+        width: 75%
+
+    +desktop
+        width: 85%
+
+    +tablet
+        padding: $s-2 $s-4 
+
+.chart-tooltip
+    background-color: $dark
+    bottom: 50%
+    color: $black
+    color: $white
+    padding: $s-2 0
+    position: absolute
+    right: -100%
+    text-align: center
+    transform: translateY(50%)
+    transition: right 500ms ease
+    width: 100%
+
+.chart-container
+    +flex_row
+    padding: $s-4 $s-8
+    width: 100%
+    position: relative
+    cursor: pointer
+
+    +tablet
+        padding: 0 $s-4
+
+    &:hover .chart-tooltip
+        right: 0
+    
+    &__info
+        +flex_col
+        margin-right: $s-4
+
+        +tablet
+            width: 50px
+
+        +mobile
+            width: 40px
+
+    &__name
+        color: $black
+        font-size: $font-size-xxxs
+        margin: 0
+
+        +tablet
+            display: none
+
+    &__chart-outside
+        background-color: $light
+        border-radius: $s-1
+        height: 30px
+        width: 100%
+
+        +mobile
+            height: 20px
+
+    &__chart-inside
+        background-color: $primary
+        border-radius: $s-1
+        height: 30px
+        transition: width 1000ms ease
+        width: 0%
+
+        +mobile
+            height: 20px
+        

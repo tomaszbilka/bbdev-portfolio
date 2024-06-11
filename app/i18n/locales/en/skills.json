@@ -1,0 +1,15 @@
+{
+  "tooltip": {
+    "react": "React is a JavaScript library for building user interfaces.",
+    "remix": "Remix is a framework for building React applications with server capabilities.",
+    "javascript": "JavaScript is my primary programming language.",
+    "html": "HTML is a markup language used for creating the structure of web pages.",
+    "css": "CSS is used for styling HTML documents.",
+    "sass": "Sass is a CSS preprocessor, I prefer it over plain CSS.",
+    "mui": "MUI (Material-UI) is a React component library based on Material Design. Good if you don't have your own designs.",
+    "tailwind": "Tailwind is a CSS framework that speeds up component styling.",
+    "graphql": "GraphQL is a query language for APIs, the most popular alongside REST queries.",
+    "sql": "SQL is a language used for managing and manipulating data in relational databases.",
+    "nest": "NestJS is a framework for building server-side applications with Node.js using TypeScript. My new interest."
+  }
+}
