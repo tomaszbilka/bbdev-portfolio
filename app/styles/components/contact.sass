@@ -1,3 +1,96 @@
++icon-rotate
+    
 .contact-section
     +section
-    padding: $s-14 0
+    position: relative
+    max-width: 100%
+
+    +mobile-xs
+        max-width: 100%
+
+.contact
+    +flex_col
+    max-width: 80%
+
+    &__info
+        +flex_row
+        bottom: 10px
+        left: 10px
+        position: absolute
+        z-index: 20
+
+        +tablet
+            display: none
+
+        &__wrapp
+            +flex_col
+            margin: $s-4
+            font-size: $font-size-xxs
+            color: $white
+
+            +desktop
+                font-size: $font-size-xxxs
+
+            svg
+                font-size: $font-size-lg
+
+                +desktop
+                    font-size: $font-size-xs
+
+    &__texts
+        +flex_col
+        margin-bottom: $s-12
+
+        h1
+            font-size: $font-size-lg
+
+        p
+            font-size: $font-size-sm
+
+.footer
+    +flex_col   
+    bottom: 0
+    position: absolute
+    width: 100%
+
+    &__container 
+        +flex_row
+        width: 100%
+
+    &__left, &__right
+        background-color: $dark
+        height: 90px
+        width: 50%
+
+        +mobile
+            height: 50px
+
+    &__left
+        clip-path: polygon(0 0, 100% 100%, 0 100%)
+
+    &__right    
+        clip-path: polygon(100% 0, 0 100%, 100% 100%)
+
+    &__bottom
+        +flex_col
+        background-color: $dark
+        color: $accent
+        height: 100px
+        text-align: center
+        width: 100%
+
+.icon
+
+    &__linkedin
+        color: $linkedin
+
+    &__github
+        color: $black
+
+    &__gmail
+        color: $gmail
+
+.rotate
+
+    &:hover
+        animation: icon-rotate 0.3s linear 0s forwards

@@ -1,14 +1,14 @@
 {
   "tooltip": {
     "react": "React to biblioteka JavaScript do budowy interfejsów użytkownika.",
-    "remix": "Remix to framework do budowy aplikacji React z wykorzystaniem moliwości serwera",
+    "remix": "Remix to framework do budowy aplikacji React z wykorzystaniem moliwości serwera.",
     "javascript": "JavaScript to mój podstawowy język programowania.",
     "html": "HTML - język znaczników używany do tworzenia struktury stron internetowych.",
     "css": "CSS - stylowanie dokumentów HTML.",
-    "sass": "Sass - preprocesor CSS, lubię zastępowanim CSS",
+    "sass": "Sass - preprocesor CSS, lubię zastępowanim CSS.",
     "mui": "MUI (Material-UI) to biblioteka komponentów React oparta na Material Design. Dobra, jeśli nie mamy własnych designów.",
     "tailwind": "Tailwind to framework CSS, przyśpiesza stylowanie komponentów.",
-    "graphql": "GraphQL to język zapytań do API, najpopularniejszy obok zapytań RESTowych",
+    "graphql": "GraphQL to język zapytań do API, najpopularniejszy obok zapytań RESTowych.",
     "sql": "SQL to język używany do zarządzania i manipulacji danymi w relacyjnych bazach danych.",
     "nest": "NestJS to framework do budowy serwerowych aplikacji Node.js w oparciu o TypeScript. Moje nowe zainteresowanie."
   }
