@@ -18,11 +18,11 @@ export default function Index() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
-    <>
+    <main>
       <Header scrollRef={scrollRef} />
       <About scrollRef={scrollRef} />
       <Skills />
       <Contact />
-    </>
+    </main>
   );
 }
