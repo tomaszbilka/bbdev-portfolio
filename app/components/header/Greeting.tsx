@@ -6,14 +6,14 @@ const Greeting = () => {
   const [isAnimationFinished, setIsAnimationFinished] = useState(false);
   const { t } = useTranslation();
 
-  const frontEnd = "Front-end developer.";
-  const fullStack = "Full-stack developer.";
+  const frontEnd = "front-end developer";
+  const fullStack = "full-stack developer";
 
   return (
     <div className="greeting">
       <div>
         <span>{t("hello")}</span>
-        <span className="greeting__name">Tomasz Bilka</span>
+        <span className="greeting__name">Tomasz Bilka</span>.
       </div>
       <div className="greeting__role">
         {isAnimationFinished ? (
