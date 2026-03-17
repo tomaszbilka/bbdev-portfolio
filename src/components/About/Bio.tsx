@@ -39,14 +39,25 @@ const Bio = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          style={{ perspective: 1000 }}
         >
-          <div className="rounded-lg bg-terminal-bg p-2 shadow-xl ring-1 ring-terminal-surface">
+          <motion.div
+            className="rounded-lg bg-terminal-bg p-2 shadow-xl ring-1 ring-terminal-surface"
+            whileHover={{
+              rotateY: 18,
+              rotateX: -6,
+              scale: 1.02,
+              transition: { duration: 0.3 },
+            }}
+            transition={{ duration: 0.3 }}
+            style={{ transformStyle: "preserve-3d" }}
+          >
             <img
               src="/images/shelby_avatar.png"
               alt="Tomasz Bilka"
               className="h-40 w-40 shrink-0 rounded-md object-cover object-top sm:h-48 sm:w-48"
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </motion.section>

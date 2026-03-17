@@ -152,11 +152,21 @@ const Skills = () => {
           <motion.div
             key={skill.id}
             className="group flex items-center gap-4 rounded-lg bg-terminal-surface/50 px-4 py-3 transition-colors hover:bg-terminal-surface"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.05 }}
-            whileHover={{ scale: 1.02 }}
+            transition={{
+              duration: 0.2,
+              delay: index * 0.02,
+              type: "spring",
+              stiffness: 200,
+            }}
+            whileHover={{
+              scale: 1.05,
+              y: -4,
+              boxShadow: "0 8px 25px -5px rgba(34, 211, 238, 0.15)",
+              transition: { duration: 0.15 },
+            }}
             title={t(`tooltip.${skill.id}`) as string}
           >
             <div className="text-terminal-accent">{skill.icon}</div>
@@ -170,7 +180,7 @@ const Skills = () => {
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.05 }}
+                  transition={{ duration: 0.35, delay: 0.05 + index * 0.02 }}
                 />
               </div>
             </div>
