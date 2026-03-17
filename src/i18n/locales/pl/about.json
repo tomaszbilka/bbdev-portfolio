@@ -1,0 +1,71 @@
+{
+  "whoAmI": "O mnie",
+  "description": "Jestem inżynierem budowy maszyn z wykształcenia, programistą z zawodu i z zamiłowania. Przez dziesięć lat prowadziłem zespół wytwarzający części metalowe jako szef produkcji. Od ponad czterech lat rozwijam się w pasjonującym świecie programowania. Specjalizuję się w technologiach frontendowych. Mam już też pierwsze doświadczenia backendowe i zaczynam pracować jako fullstack. Systematycznie wdrażam narzędzia AI w procesie tworzenia oprogramowania. W wolnym czasie gram w piłkę nożną, biegam, chodzę po górach i czytam ksiąki, najchętniej dotyczące geopolityki oraz rozwoju osobistego.",
+  "skills": "Umiejętności",
+  "experience": "Doświadczenie",
+  "projects": "Wybrane projekty",
+  "jobs": [
+    {
+      "title": "Full stack developer",
+      "company": "Beqom",
+      "period": "09.2025 — Obecnie",
+      "description": "Rozwój platformy HRM z wykorzystaniem React, useQuery i .NET."
+    },
+    {
+      "title": "Frontend developer",
+      "company": "Youriteams",
+      "period": "12.2024 — 06.2025 (kontrakt)",
+      "description": "Członek zespołu redesignującego aplikację w Remix.js."
+    },
+    {
+      "title": "Frontend/Fullstack developer",
+      "company": "Selleo",
+      "period": "08.2022 — Obecnie",
+      "description": "Budowa i utrzymanie platformy multi-aplikacyjnej w React, Remix, React Native i Nest.js."
+    },
+    {
+      "title": "Szef produkcji",
+      "company": "Produkcja części metalowych",
+      "period": "2012 — 2022",
+      "description": "Prowadzenie zespołu wytwarzającego części metalowe."
+    }
+  ],
+  "projectList": [
+    {
+      "title": "HRM app redesign",
+      "period": "12.2024",
+      "description": "Dodatkowy projekt w zespole redesignującym UI aplikacji według nowych designów.",
+      "contributions": "Remix.js + i18n + react-hook-form + Tailwind, Storybook + Design system + Figma"
+    },
+    {
+      "title": "3D models app",
+      "period": "09.2024 — 04.2026",
+      "description": "Aplikacja webowa wyświetlająca podglądy modeli 3D wraz z wykresami i danymi.",
+      "contributions": "React.js + Recoil + Tailwind, Storybook + Design system, Three.js + Plotly.js"
+    },
+    {
+      "title": "LMS platform",
+      "period": "08.2024 — 09.2024",
+      "description": "Learning Management System: projekt wewnętrzny jako fullstack developer.",
+      "contributions": "Nest.js + Admin.js + DrizzleORM + Swagger"
+    }
+  ],
+  "tooltip": {
+    "react": "React to biblioteka JavaScript do budowy interfejsów użytkownika.",
+    "typescript": "TypeScript dodaje statyczne typowanie do JavaScript.",
+    "javascript": "JavaScript to mój podstawowy język programowania.",
+    "html": "HTML - język znaczników używany do tworzenia struktury stron internetowych.",
+    "css": "CSS - stylowanie dokumentów HTML.",
+    "sass": "Sass - preprocesor CSS, lubię zastępować nim CSS.",
+    "mui": "MUI (Material-UI) to biblioteka komponentów React oparta na Material Design.",
+    "tailwind": "Tailwind to framework CSS, przyspiesza stylowanie komponentów.",
+    "python": "Python to wielozadaniowy język programowania do webu, data science i automatyzacji.",
+    "fastapi": "FastAPI to nowoczesny framework do budowy API w Pythonie.",
+    "go": "Go to skompilowany język programowania zaprojektowany dla prostoty i wydajności.",
+    "dotnet": ".NET to platforma Microsoft do budowy aplikacji.",
+    "ai": "Narzędzia AI: LLM, prompt engineering, API AI.",
+    "graphql": "GraphQL to język zapytań do API, najpopularniejszy obok zapytań RESTowych.",
+    "sql": "SQL to język używany do zarządzania danymi w relacyjnych bazach danych.",
+    "nest": "NestJS to framework do budowy serwerowych aplikacji Node.js w oparciu o TypeScript."
+  }
+}

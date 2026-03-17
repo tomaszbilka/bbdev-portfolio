@@ -1,0 +1,71 @@
+{
+  "whoAmI": "About",
+  "description": "I am a mechanical engineer by education, a programmer by profession, and by passion. For ten years, I led a team producing metal parts as a production manager. For over four years, I have been developing in the fascinating world of programming. I specialize in frontend technologies. I already have my first backend experience and am starting to work as a fullstack developer. I systematically incorporate AI tools into my development workflow. In my free time, I play football, run, hike, and read books, preferably on geopolitics and personal development.",
+  "skills": "Skills",
+  "experience": "Experience",
+  "projects": "Selected work",
+  "jobs": [
+    {
+      "title": "Full stack developer",
+      "company": "Beqom",
+      "period": "09.2025 — Present",
+      "description": "HRM platform development with React, useQuery and .NET."
+    },
+    {
+      "title": "Frontend developer",
+      "company": "Youriteams",
+      "period": "12.2024 — 06.2025 (contract)",
+      "description": "Part of the team redesigning the application in Remix.js."
+    },
+    {
+      "title": "Frontend/Fullstack developer",
+      "company": "Selleo",
+      "period": "08.2022 — Present",
+      "description": "Building and maintaining a multi-app platform using React, Remix, React Native and Nest.js."
+    },
+    {
+      "title": "Production Manager",
+      "company": "Metal parts production",
+      "period": "2012 — 2022",
+      "description": "Led a team producing metal parts."
+    }
+  ],
+  "projectList": [
+    {
+      "title": "HRM app redesign",
+      "period": "12.2024",
+      "description": "Additional project as part of the team redesigning the application UI according to new designs.",
+      "contributions": "Remix.js + i18n + react-hook-form + Tailwind, Storybook + Design system + Figma"
+    },
+    {
+      "title": "3D models app",
+      "period": "09.2024 — 04.2026",
+      "description": "Web application displaying 3D model previews along with various plots, charts, and data.",
+      "contributions": "React.js + Recoil + Tailwind, Storybook + Design system, Three.js + Plotly.js"
+    },
+    {
+      "title": "LMS platform",
+      "period": "08.2024 — 09.2024",
+      "description": "Learning Management System: internal project as fullstack developer.",
+      "contributions": "Nest.js + Admin.js + DrizzleORM + Swagger"
+    }
+  ],
+  "tooltip": {
+    "react": "React is a JavaScript library for building user interfaces.",
+    "typescript": "TypeScript adds static typing to JavaScript.",
+    "javascript": "JavaScript is my primary programming language.",
+    "html": "HTML is a markup language used for creating the structure of web pages.",
+    "css": "CSS is used for styling HTML documents.",
+    "sass": "Sass is a CSS preprocessor, I prefer it over plain CSS.",
+    "mui": "MUI (Material-UI) is a React component library based on Material Design.",
+    "tailwind": "Tailwind is a CSS framework that speeds up component styling.",
+    "python": "Python is a versatile programming language for web, data science and automation.",
+    "fastapi": "FastAPI is a modern, high-performance web framework for building APIs with Python.",
+    "go": "Go is a statically typed compiled language designed for simplicity and efficiency.",
+    "dotnet": ".NET is Microsoft's platform for building applications.",
+    "ai": "AI tools and integrations: LLMs, prompt engineering, AI APIs.",
+    "graphql": "GraphQL is a query language for APIs, the most popular alongside REST.",
+    "sql": "SQL is a language used for managing and manipulating data in relational databases.",
+    "nest": "NestJS is a framework for building server-side applications with Node.js using TypeScript."
+  }
+}

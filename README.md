@@ -1,68 +1,36 @@
-# Welcome to Remix!
+# BBDEV Portfolio
 
-- [Remix Docs](https://remix.run/docs)
-- [Netlify Functions Overview](https://docs.netlify.com/functions/overview)
+Modern portfolio built with React, Tailwind CSS, and Motion.
 
-## Netlify Setup
+## Stack
 
-1. Install the [Netlify CLI](https://docs.netlify.com/cli/get-started/):
-
-```sh
-npm i -g netlify-cli
-```
-
-If you have previously installed the Netlify CLI, you should update it to the latest version:
-
-```sh
-npm i -g netlify-cli@latest
-```
-
-2. Sign up and log in to Netlify:
-
-```sh
-netlify login
-```
-
-3. Create a new site:
-
-```sh
-netlify init
-```
+- **React 19** – UI library
+- **Vite** – Build tool
+- **Tailwind CSS** – Styling
+- **Motion** – Animations
+- **react-i18next** – Internationalization (PL/EN)
 
 ## Development
 
-Ensure all packages are installed by running:
-
 ```sh
 npm install
+npm run dev
 ```
 
-Run
+Open [http://localhost:5173](http://localhost:5173).
+
+## Build
 
 ```sh
-netlify dev
+npm run build
+npm run preview  # Preview production build
 ```
 
-Open up [http://localhost:8888](http://localhost:8888), and you're ready to go!
-
-### Serve your site locally
-
-To serve your site locally in a production-like environment, run
+## Netlify
 
 ```sh
-netlify serve
-```
-
-Your site will be available at [http://localhost:8888](http://localhost:8888). Note that it will not auto-reload when you make changes.
-
-## Deployment
-
-There are two ways to deploy your app to Netlify, you can either link your app to your git repo and have it auto deploy changes to Netlify, or you can deploy your app manually. If you've followed the setup instructions already, all you need to do is run this:
-
-```sh
-# preview deployment
+npm run build
 netlify deploy --build
-
-# production deployment
-netlify deploy --build --prod
 ```
+
+Or connect the repo for automatic deploys. Configure `netlify.toml` for build settings.
