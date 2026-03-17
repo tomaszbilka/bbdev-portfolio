@@ -1,8 +1,16 @@
-import { vitePlugin as remix } from "@remix-run/dev";
+import path from "path";
+import { fileURLToPath } from "url";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  plugins: [remix(), netlifyPlugin(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });

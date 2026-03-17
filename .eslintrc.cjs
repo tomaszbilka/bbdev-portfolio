@@ -38,11 +38,6 @@ module.exports = {
         react: {
           version: "detect",
         },
-        formComponents: ["Form"],
-        linkComponents: [
-          { name: "Link", linkAttribute: "to" },
-          { name: "NavLink", linkAttribute: "to" },
-        ],
         "import/resolver": {
           typescript: {},
         },
@@ -55,7 +50,7 @@ module.exports = {
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
       settings: {
-        "import/internal-regex": "^~/",
+        "import/internal-regex": "^@/",
         "import/resolver": {
           node: {
             extensions: [".ts", ".tsx"],
