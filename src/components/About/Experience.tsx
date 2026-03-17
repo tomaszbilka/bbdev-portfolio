@@ -42,7 +42,17 @@ const Experience = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
             >
-              <span className="absolute left-2.5 h-3 w-3 rounded-full bg-terminal-accent" />
+              <motion.span
+              className="absolute left-2.5 h-3 w-3 rounded-full bg-terminal-accent"
+              animate={{
+                boxShadow: [
+                  "0 0 6px 2px rgba(34, 211, 238, 0.8)",
+                  "0 0 12px 4px rgba(34, 211, 238, 0.5)",
+                  "0 0 6px 2px rgba(34, 211, 238, 0.8)",
+                ],
+              }}
+              transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
+            />
               <div className="rounded-lg bg-terminal-surface/30 p-4 transition-colors hover:bg-terminal-surface/50">
                 <div className="mb-1 flex flex-wrap items-baseline gap-2">
                   <h3 className="font-sans text-lg font-semibold text-terminal-text">
