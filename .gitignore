@@ -5,6 +5,7 @@ dist
 /public/build
 /build
 .env
+.tool-versions
 
 # Local Netlify folder
 .netlify
