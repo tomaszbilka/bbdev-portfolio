@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 
 import TerminalNav from "./TerminalNav";
 import LanguageSwitch from "./LanguageSwitch";
+import Seo from "./Seo";
 import About from "./About";
 import Contributions from "./Contributions";
 import Contact from "./Contact";
@@ -20,6 +21,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen bg-terminal-bg text-terminal-text antialiased">
+      <Seo section={activeSection} />
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
         <header className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <TerminalNav
