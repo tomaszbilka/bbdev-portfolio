@@ -4,9 +4,16 @@ import { motion, AnimatePresence } from "motion/react";
 import TerminalNav from "./TerminalNav";
 import LanguageSwitch from "./LanguageSwitch";
 import About from "./About";
+import Contributions from "./Contributions";
 import Contact from "./Contact";
 
-type Section = "about" | "contact";
+type Section = "about" | "contributions" | "contact";
+
+const sectionComponents: Record<Section, React.ReactNode> = {
+  about: <About />,
+  contributions: <Contributions />,
+  contact: <Contact />,
+};
 
 function Layout() {
   const [activeSection, setActiveSection] = useState<Section>("about");
@@ -24,27 +31,15 @@ function Layout() {
 
         <main className="min-h-[60vh]">
           <AnimatePresence mode="wait">
-            {activeSection === "about" ? (
-              <motion.div
-                key="about"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <About />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="contact"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <Contact />
-              </motion.div>
-            )}
+            <motion.div
+              key={activeSection}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              {sectionComponents[activeSection]}
+            </motion.div>
           </AnimatePresence>
         </main>
 

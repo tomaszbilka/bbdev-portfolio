@@ -1,0 +1,18 @@
+{
+  "title": "Public Contributions",
+  "subtitle": "Open-source tools and apps I've published publicly.",
+  "npm": {
+    "label": "npm package",
+    "name": "lettermark",
+    "description": "Turn a name into initials and a deterministic, WCAG-safe color for avatar fallbacks. Lightweight, zero-dependency, framework-agnostic.",
+    "url": "https://www.npmjs.com/package/lettermark",
+    "repo": "https://github.com/tomaszbilka/lettermark"
+  },
+  "voxapp": {
+    "label": "mobile app",
+    "name": "VoxApp",
+    "description": "Live voice broadcasting for guides, educators and anyone who wants to deliver real-time audio to a group of listeners.",
+    "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.tomaszbilka.voxapp",
+    "iosNote": "Also available on iOS"
+  }
+}

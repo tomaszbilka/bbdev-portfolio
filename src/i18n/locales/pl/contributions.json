@@ -1,0 +1,18 @@
+{
+  "title": "Wkład publiczny",
+  "subtitle": "Narzędzia open source i aplikacje, które opublikowałem publicznie.",
+  "npm": {
+    "label": "paczka npm",
+    "name": "lettermark",
+    "description": "Zamienia imię i nazwisko w inicjały oraz deterministyczny, bezpieczny kolorystycznie kolor awatara. Lekka, bez zależności, framework-agnostic.",
+    "url": "https://www.npmjs.com/package/lettermark",
+    "repo": "https://github.com/tomaszbilka/lettermark"
+  },
+  "voxapp": {
+    "label": "aplikacja mobilna",
+    "name": "VoxApp",
+    "description": "Transmisja głosu na żywo dla przewodników, edukatorów i każdego, kto chce przekazywać audio w czasie rzeczywistym grupie słuchaczy.",
+    "googlePlayUrl": "https://play.google.com/store/apps/details?id=com.tomaszbilka.voxapp",
+    "iosNote": "Dostępna również na iOS"
+  }
+}

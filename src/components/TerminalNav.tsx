@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 
-type NavItem = "about" | "contact";
+type NavItem = "about" | "contributions" | "contact";
 
 type Props = {
   activeSection: NavItem;
@@ -8,9 +8,9 @@ type Props = {
 };
 
 const TerminalNav = ({ activeSection, onNavigate }: Props) => {
-
   const navItems: { id: NavItem; label: string }[] = [
     { id: "about", label: "about" },
+    { id: "contributions", label: "contributions" },
     { id: "contact", label: "contact" },
   ];
 
