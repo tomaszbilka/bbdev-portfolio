@@ -3,6 +3,13 @@ import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
+const sectionMotion = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.6 },
+} as const;
+
 const links = [
   {
     id: "linkedin",
@@ -28,41 +35,21 @@ const Contact = () => {
   const { t } = useTranslation("contact");
 
   return (
-    <motion.section
-      className="py-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.h1
-        className="mb-6 font-mono text-2xl font-medium text-terminal-accent"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-      >
+    <motion.section className="py-8" {...sectionMotion}>
+      <h1 className="mb-6 font-mono text-2xl font-medium text-terminal-accent">
         {t("contact")}
-      </motion.h1>
+      </h1>
 
-      <motion.p
-        className="mb-8 font-sans text-terminal-muted"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-      >
-        {t("info")}
-      </motion.p>
+      <p className="mb-8 font-sans text-terminal-muted">{t("info")}</p>
 
       <div className="flex flex-wrap gap-6">
-        {links.map((link, index) => (
+        {links.map((link) => (
           <motion.a
             key={link.id}
             href={link.href}
             target="_blank"
             rel="noreferrer"
             className="group flex items-center gap-3 rounded-lg bg-terminal-surface/50 px-5 py-3 transition-colors hover:bg-terminal-surface hover:text-terminal-accent"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
@@ -72,14 +59,9 @@ const Contact = () => {
         ))}
       </div>
 
-      <motion.p
-        className="mt-8 font-mono text-sm text-terminal-muted"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.6 }}
-      >
+      <p className="mt-8 font-mono text-sm text-terminal-muted">
         {t("emailMe")}
-      </motion.p>
+      </p>
     </motion.section>
   );
 };

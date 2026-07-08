@@ -3,40 +3,27 @@ import { useTranslation } from "react-i18next";
 import { FaGithub, FaApple, FaGooglePlay } from "react-icons/fa";
 import { SiNpm } from "react-icons/si";
 
+const sectionMotion = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.3 },
+  transition: { duration: 0.6 },
+} as const;
+
 const Contributions = () => {
   const { t } = useTranslation("contributions");
 
   return (
-    <motion.section
-      className="py-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <motion.h1
-        className="mb-2 font-mono text-2xl font-medium text-terminal-accent"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-      >
+    <motion.section className="py-8" {...sectionMotion}>
+      <h1 className="mb-2 font-mono text-2xl font-medium text-terminal-accent">
         {t("title")}
-      </motion.h1>
+      </h1>
 
-      <motion.p
-        className="mb-8 font-sans text-terminal-muted"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.4, delay: 0.2 }}
-      >
-        {t("subtitle")}
-      </motion.p>
+      <p className="mb-8 font-sans text-terminal-muted">{t("subtitle")}</p>
 
       <div className="space-y-6">
         <motion.article
           className="rounded-lg bg-terminal-surface/30 p-5 ring-1 ring-terminal-surface"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.3 }}
           whileHover={{ scale: 1.01 }}
         >
           <p className="mb-2 font-mono text-xs text-terminal-accent">
@@ -76,9 +63,6 @@ const Contributions = () => {
 
         <motion.article
           className="rounded-lg bg-terminal-surface/30 p-5 ring-1 ring-terminal-surface"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
           whileHover={{ scale: 1.01 }}
         >
           <p className="mb-2 font-mono text-xs text-terminal-accent">

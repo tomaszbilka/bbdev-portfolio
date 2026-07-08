@@ -1,18 +1,18 @@
 import { motion } from "motion/react";
+import { NavLink, useLocation } from "react-router";
 
-type NavItem = "about" | "contributions" | "contact";
+import { getSectionFromPath } from "../lib/types";
 
-type Props = {
-  activeSection: NavItem;
-  onNavigate: (section: NavItem) => void;
-};
+const navItems = [
+  { to: "/", label: "about" },
+  { to: "/contributions", label: "contributions" },
+  { to: "/blog", label: "blog" },
+  { to: "/contact", label: "contact" },
+] as const;
 
-const TerminalNav = ({ activeSection, onNavigate }: Props) => {
-  const navItems: { id: NavItem; label: string }[] = [
-    { id: "about", label: "about" },
-    { id: "contributions", label: "contributions" },
-    { id: "contact", label: "contact" },
-  ];
+const TerminalNav = () => {
+  const location = useLocation();
+  const activeSection = getSectionFromPath(location.pathname);
 
   return (
     <motion.nav
@@ -32,19 +32,26 @@ const TerminalNav = ({ activeSection, onNavigate }: Props) => {
       </div>
       <div className="mt-3 flex flex-wrap gap-x-6 gap-y-1">
         {navItems.map((item) => (
-          <motion.button
-            key={item.id}
-            onClick={() => onNavigate(item.id)}
-            className={`transition-colors hover:text-terminal-accent focus:outline-none focus:ring-2 focus:ring-terminal-accent focus:ring-offset-2 focus:ring-offset-terminal-bg rounded px-1 ${
-              activeSection === item.id
-                ? "text-terminal-accent font-medium"
-                : "text-terminal-muted hover:text-terminal-text"
-            }`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <NavLink
+            key={item.to}
+            to={item.to}
+            end={item.to === "/"}
+            className={({ isActive }) =>
+              `transition-colors hover:text-terminal-accent focus:outline-none focus:ring-2 focus:ring-terminal-accent focus:ring-offset-2 focus:ring-offset-terminal-bg rounded px-1 ${
+                isActive
+                  ? "text-terminal-accent font-medium"
+                  : "text-terminal-muted hover:text-terminal-text"
+              }`
+            }
           >
-            [system:~/ {item.label}]
-          </motion.button>
+            <motion.span
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-block"
+            >
+              [system:~/ {item.label}]
+            </motion.span>
+          </NavLink>
         ))}
       </div>
     </motion.nav>

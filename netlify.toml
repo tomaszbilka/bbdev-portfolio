@@ -1,10 +1,10 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "build/client"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/__spa-fallback.html"
   status = 200
 
 [[headers]]
