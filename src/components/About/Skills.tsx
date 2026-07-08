@@ -21,114 +21,58 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-type Skill = {
-  id: string;
-  name: string;
-  icon: React.ReactNode;
-  level: number;
+type SkillCategory = {
+  title: string;
+  subtitle: string;
+  items: string[];
+};
+
+const CATEGORY_KEYS = ["commercial", "growing", "aiLearning"] as const;
+
+const SKILL_NAMES: Record<string, string> = {
+  react: "React",
+  typescript: "TypeScript",
+  javascript: "JavaScript",
+  html: "HTML",
+  css: "CSS",
+  sass: "Sass",
+  mui: "MUI",
+  tailwind: "Tailwind",
+  graphql: "GraphQL",
+  nest: "NestJS",
+  sql: "SQL",
+  python: "Python",
+  fastapi: "FastAPI",
+  go: "Go",
+  dotnet: ".NET",
+  ai: "AI",
+};
+
+const SKILL_ICONS: Record<string, React.ReactNode> = {
+  react: <FaReact className="h-5 w-5" />,
+  typescript: <SiTypescript className="h-5 w-5" />,
+  javascript: <IoLogoJavascript className="h-5 w-5" />,
+  html: <IoLogoHtml5 className="h-5 w-5" />,
+  css: <IoLogoCss3 className="h-5 w-5" />,
+  sass: <SiSass className="h-5 w-5" />,
+  mui: <SiMui className="h-5 w-5" />,
+  tailwind: <SiTailwindcss className="h-5 w-5" />,
+  graphql: <SiGraphql className="h-5 w-5" />,
+  nest: <SiNestjs className="h-5 w-5" />,
+  sql: <DiMysql className="h-5 w-5" />,
+  python: <SiPython className="h-5 w-5" />,
+  fastapi: <SiFastapi className="h-5 w-5" />,
+  go: <SiGo className="h-5 w-5" />,
+  dotnet: <SiDotnet className="h-5 w-5" />,
+  ai: <SiOpenai className="h-5 w-5" />,
 };
 
 const Skills = () => {
   const { t } = useTranslation("about");
-
-  const skills: Skill[] = [
-    {
-      id: "react",
-      name: "React",
-      icon: <FaReact className="h-6 w-6" />,
-      level: 85,
-    },
-    {
-      id: "typescript",
-      name: "TypeScript",
-      icon: <SiTypescript className="h-6 w-6" />,
-      level: 75,
-    },
-    {
-      id: "javascript",
-      name: "JavaScript",
-      icon: <IoLogoJavascript className="h-6 w-6" />,
-      level: 70,
-    },
-    {
-      id: "html",
-      name: "HTML",
-      icon: <IoLogoHtml5 className="h-6 w-6" />,
-      level: 65,
-    },
-    {
-      id: "css",
-      name: "CSS",
-      icon: <IoLogoCss3 className="h-6 w-6" />,
-      level: 60,
-    },
-    {
-      id: "sass",
-      name: "Sass",
-      icon: <SiSass className="h-6 w-6" />,
-      level: 60,
-    },
-    {
-      id: "mui",
-      name: "MUI",
-      icon: <SiMui className="h-6 w-6" />,
-      level: 60,
-    },
-    {
-      id: "tailwind",
-      name: "Tailwind",
-      icon: <SiTailwindcss className="h-6 w-6" />,
-      level: 60,
-    },
-    {
-      id: "python",
-      name: "Python",
-      icon: <SiPython className="h-6 w-6" />,
-      level: 40,
-    },
-    {
-      id: "fastapi",
-      name: "FastAPI",
-      icon: <SiFastapi className="h-6 w-6" />,
-      level: 50,
-    },
-    {
-      id: "go",
-      name: "Go",
-      icon: <SiGo className="h-6 w-6" />,
-      level: 40,
-    },
-    {
-      id: "dotnet",
-      name: ".NET",
-      icon: <SiDotnet className="h-6 w-6" />,
-      level: 10,
-    },
-    {
-      id: "ai",
-      name: "AI",
-      icon: <SiOpenai className="h-6 w-6" />,
-      level: 50,
-    },
-    {
-      id: "graphql",
-      name: "GraphQL",
-      icon: <SiGraphql className="h-6 w-6" />,
-      level: 50,
-    },
-    {
-      id: "sql",
-      name: "SQL",
-      icon: <DiMysql className="h-6 w-6" />,
-      level: 30,
-    },
-    {
-      id: "nest",
-      name: "NestJS",
-      icon: <SiNestjs className="h-6 w-6" />,
-      level: 20,
-    },
-  ];
+  const categories = t("skillCategories", { returnObjects: true }) as Record<
+    string,
+    SkillCategory
+  >;
 
   return (
     <motion.section
@@ -147,48 +91,63 @@ const Skills = () => {
       >
         {t("skills")}
       </motion.h2>
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={skill.id}
-            className="group flex items-center gap-4 rounded-lg bg-terminal-surface/50 px-4 py-3 transition-colors hover:bg-terminal-surface"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.2,
-              delay: index * 0.02,
-              type: "spring",
-              stiffness: 200,
-            }}
-            whileHover={{
-              scale: 1.05,
-              y: -4,
-              boxShadow: "0 8px 25px -5px rgba(34, 211, 238, 0.15)",
-              transition: { duration: 0.15 },
-            }}
-            title={t(`tooltip.${skill.id}`) as string}
-          >
-            <div className="text-terminal-accent">{skill.icon}</div>
-            <div className="min-w-0 flex-1">
-              <p className="truncate font-sans font-medium text-terminal-text">
-                {skill.name}
+      <div className="grid gap-6 md:grid-cols-3">
+        {CATEGORY_KEYS.map((key, colIndex) => {
+          const category = categories[key];
+          if (!category) return null;
+
+          return (
+            <motion.div
+              key={key}
+              className="rounded-lg bg-terminal-surface/30 p-5 ring-1 ring-terminal-surface"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.25,
+                delay: colIndex * 0.08,
+                type: "spring",
+                stiffness: 200,
+              }}
+            >
+              <h3 className="font-mono text-base font-medium text-terminal-accent">
+                {category.title}
+              </h3>
+              <p className="mb-4 font-mono text-xs text-terminal-muted">
+                {category.subtitle}
               </p>
-              <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-terminal-bg">
-                <motion.div
-                  className="h-full rounded-full bg-terminal-accent"
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.35, delay: 0.05 + index * 0.02 }}
-                />
+              <div className="flex flex-wrap gap-2">
+                {category.items.map((skillId, index) => (
+                  <motion.div
+                    key={skillId}
+                    className="flex items-center gap-2 rounded-md bg-terminal-surface/50 px-3 py-2"
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                      duration: 0.2,
+                      delay: colIndex * 0.08 + index * 0.03,
+                    }}
+                    whileHover={{
+                      scale: 1.05,
+                      y: -2,
+                      boxShadow: "0 6px 20px -4px rgba(34, 211, 238, 0.2)",
+                      transition: { duration: 0.15 },
+                    }}
+                    title={t(`tooltip.${skillId}`) as string}
+                  >
+                    <span className="text-terminal-accent">
+                      {SKILL_ICONS[skillId]}
+                    </span>
+                    <span className="font-sans text-sm font-medium text-terminal-text">
+                      {SKILL_NAMES[skillId]}
+                    </span>
+                  </motion.div>
+                ))}
               </div>
-            </div>
-            <span className="font-mono text-sm text-terminal-muted">
-              {skill.level}%
-            </span>
-          </motion.div>
-        ))}
+            </motion.div>
+          );
+        })}
       </div>
     </motion.section>
   );
