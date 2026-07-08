@@ -20,7 +20,7 @@
     {
       "title": "Frontend/Fullstack developer",
       "company": "Selleo",
-      "period": "08.2022 — Present",
+      "period": "08.2022 — 04.2026",
       "description": "Building and maintaining a multi-app platform using React, Remix, React Native and Nest.js."
     },
     {
@@ -50,6 +50,23 @@
       "contributions": "Nest.js + Admin.js + DrizzleORM + Swagger"
     }
   ],
+  "skillCategories": {
+    "commercial": {
+      "title": "Production Ready",
+      "subtitle": "commercial experience",
+      "items": ["react", "typescript", "javascript", "html", "css", "tailwind", "sass", "mui", "graphql"]
+    },
+    "growing": {
+      "title": "Building Depth",
+      "subtitle": "growing experience",
+      "items": ["nest", "sql", "python", "fastapi"]
+    },
+    "aiLearning": {
+      "title": "Learning with AI",
+      "subtitle": "ai-assisted growth",
+      "items": ["go", "dotnet", "ai"]
+    }
+  },
   "tooltip": {
     "react": "React is a JavaScript library for building user interfaces.",
     "typescript": "TypeScript adds static typing to JavaScript.",
