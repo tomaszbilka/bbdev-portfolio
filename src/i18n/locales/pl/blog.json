@@ -3,5 +3,6 @@
   "subtitle": "Krótkie wpisy o kodzie, wzorcach React i ciekawostkach technicznych.",
   "empty": "Brak wpisów.",
   "readMore": "Czytaj więcej",
-  "backToList": "Wróć do bloga"
+  "backToList": "Wróć do bloga",
+  "loading": "Ładowanie wpisu…"
 }

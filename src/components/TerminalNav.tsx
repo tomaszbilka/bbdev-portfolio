@@ -26,7 +26,9 @@ const TerminalNav = () => {
         <span>:</span>
         <span className="text-terminal-accent">~</span>
         <span>/</span>
-        <span className="text-terminal-text">{activeSection}</span>
+        <span className="text-terminal-text">
+          {activeSection === "notFound" ? "not-found" : activeSection}
+        </span>
         <span className="text-terminal-accent">$</span>
         <span className="animate-pulse">▋</span>
       </div>

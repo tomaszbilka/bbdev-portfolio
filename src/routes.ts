@@ -7,5 +7,6 @@ export default [
     route("contact", "routes/contact.tsx"),
     route("blog", "routes/blog._index.tsx"),
     route("blog/:slug", "routes/blog.$slug.tsx"),
+    route("*", "routes/$.tsx"),
   ]),
 ] satisfies RouteConfig;

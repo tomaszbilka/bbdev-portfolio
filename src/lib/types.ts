@@ -24,11 +24,26 @@ export type PostSummary = {
   pl: Pick<PostLocale, "title" | "description">;
 };
 
-export type SiteSection = "about" | "contributions" | "contact" | "blog";
+export type SiteSection =
+  | "about"
+  | "contributions"
+  | "contact"
+  | "blog"
+  | "notFound";
 
 export function getSectionFromPath(pathname: string): SiteSection {
-  if (pathname.startsWith("/blog")) return "blog";
-  if (pathname.startsWith("/contributions")) return "contributions";
-  if (pathname.startsWith("/contact")) return "contact";
-  return "about";
+  if (
+    pathname === "/" ||
+    pathname === "/contributions" ||
+    pathname === "/contact" ||
+    pathname === "/blog" ||
+    /^\/blog\/[^/]+$/.test(pathname)
+  ) {
+    if (pathname.startsWith("/blog")) return "blog";
+    if (pathname.startsWith("/contributions")) return "contributions";
+    if (pathname.startsWith("/contact")) return "contact";
+    return "about";
+  }
+
+  return "notFound";
 }

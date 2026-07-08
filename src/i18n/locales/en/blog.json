@@ -3,5 +3,6 @@
   "subtitle": "Short notes on code, React patterns and things I find interesting.",
   "empty": "No posts yet.",
   "readMore": "Read more",
-  "backToList": "Back to blog"
+  "backToList": "Back to blog",
+  "loading": "Loading post…"
 }

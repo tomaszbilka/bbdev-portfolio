@@ -3,6 +3,7 @@ import blog from "./blog.json";
 import common from "./common.json";
 import contact from "./contact.json";
 import contributions from "./contributions.json";
+import notFound from "./notFound.json";
 import seo from "./seo.json";
 
 export default {
@@ -11,5 +12,6 @@ export default {
   common,
   contact,
   contributions,
+  notFound,
   seo,
 };

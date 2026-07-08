@@ -28,16 +28,21 @@ type Pages = {
       "slug": string;
     };
   };
+  "/*": {
+    params: {
+      "*": string;
+    };
+  };
 };
 
 type RouteFiles = {
   "root.tsx": {
     id: "root";
-    page: "/" | "/contributions" | "/contact" | "/blog" | "/blog/:slug";
+    page: "/" | "/contributions" | "/contact" | "/blog" | "/blog/:slug" | "/*";
   };
   "routes/layout.tsx": {
     id: "routes/layout";
-    page: "/" | "/contributions" | "/contact" | "/blog" | "/blog/:slug";
+    page: "/" | "/contributions" | "/contact" | "/blog" | "/blog/:slug" | "/*";
   };
   "routes/_index.tsx": {
     id: "routes/_index";
@@ -59,6 +64,10 @@ type RouteFiles = {
     id: "routes/blog.$slug";
     page: "/blog/:slug";
   };
+  "routes/$.tsx": {
+    id: "routes/$";
+    page: "/*";
+  };
 };
 
 type RouteModules = {
@@ -69,4 +78,5 @@ type RouteModules = {
   "routes/contact": typeof import("./src/routes/contact.tsx");
   "routes/blog._index": typeof import("./src/routes/blog._index.tsx");
   "routes/blog.$slug": typeof import("./src/routes/blog.$slug.tsx");
+  "routes/$": typeof import("./src/routes/$.tsx");
 };
