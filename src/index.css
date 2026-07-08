@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .blog-content h2 {
+    @apply mb-3 mt-8 font-sans text-xl font-semibold text-terminal-accent;
+  }
+
+  .blog-content h3 {
+    @apply mb-2 mt-6 font-sans text-lg font-medium text-terminal-text;
+  }
+
+  .blog-content p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .blog-content ul {
+    @apply mb-4 list-inside list-disc space-y-1;
+  }
+
+  .blog-content ol {
+    @apply mb-4 list-inside list-decimal space-y-1;
+  }
+
+  .blog-content a {
+    @apply text-terminal-accent underline decoration-terminal-accent/40 underline-offset-2 hover:decoration-terminal-accent;
+  }
+
+  .blog-content blockquote {
+    @apply mb-4 border-l-2 border-terminal-accent pl-4 italic text-terminal-muted;
+  }
+
+  .blog-content pre {
+    @apply mb-4 overflow-x-auto rounded-lg border border-terminal-surface bg-terminal-surface/50 p-4 font-mono text-sm;
+  }
+
+  .blog-content :not(pre) > code {
+    @apply rounded bg-terminal-surface px-1.5 py-0.5 font-mono text-sm text-terminal-accent;
+  }
+}

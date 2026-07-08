@@ -4,14 +4,16 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
+    "build": "react-router build",
+    "dev": "react-router dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "preview": "vite preview",
     "start": "netlify serve",
-    "typecheck": "tsc"
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@react-router/node": "^7.18.1",
+    "gray-matter": "^4.0.3",
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "motion": "^11.11.17",
@@ -19,9 +21,18 @@
     "react-dom": "^19.0.0",
     "react-helmet-async": "^3.0.0",
     "react-i18next": "^14.1.2",
-    "react-icons": "^5.2.1"
+    "react-icons": "^5.2.1",
+    "react-markdown": "^10.1.0",
+    "react-router": "^7.18.1",
+    "rehype-pretty-code": "^0.14.4",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "unified": "^11.0.5"
   },
   "devDependencies": {
+    "@react-router/dev": "^7.18.1",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
