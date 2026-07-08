@@ -15,14 +15,31 @@ const Bio = () => {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[1fr_auto] md:items-start md:gap-12">
         <div className="min-w-0 order-2 md:order-1">
           <motion.h1
-            className="mb-2 font-sans text-3xl font-semibold text-terminal-accent md:text-4xl"
+            className="mb-1 font-sans text-3xl font-semibold text-terminal-accent md:text-4xl"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            {t("whoAmI")}
+            {t("heroName")}
           </motion.h1>
+          <motion.p
+            className="mb-4 font-sans text-lg text-terminal-muted md:text-xl"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+          >
+            {t("heroRole")}
+          </motion.p>
+          <motion.h2
+            className="sr-only"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            {t("whoAmI")}
+          </motion.h2>
           <motion.p
             className="font-sans leading-relaxed text-terminal-text/90"
             initial={{ opacity: 0 }}

@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "Tomasz Bilka | Fullstack Developer — Portfolio",
+  "defaultDescription": "Portfolio of Tomasz Bilka — fullstack developer specializing in React, TypeScript and .NET. Commercial experience, open-source contributions and mobile apps.",
+  "ogTitle": "Tomasz Bilka | Fullstack Developer",
+  "ogDescription": "Fullstack developer portfolio — React, TypeScript, .NET, open-source and mobile apps.",
+  "personJobTitle": "Fullstack Developer",
+  "knowsAbout": ["React", "TypeScript", "JavaScript", ".NET", "NestJS", "GraphQL", "Tailwind CSS"],
+  "sections": {
+    "about": "About",
+    "contributions": "Contributions",
+    "contact": "Contact"
+  }
+}

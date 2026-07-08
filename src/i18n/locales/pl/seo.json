@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "Tomasz Bilka | Developer fullstack — Portfolio",
+  "defaultDescription": "Portfolio Tomasza Bilki — developer fullstack specjalizujący się w React, TypeScript i .NET. Doświadczenie komercyjne, wkład open source i aplikacje mobilne.",
+  "ogTitle": "Tomasz Bilka | Developer fullstack",
+  "ogDescription": "Portfolio developera fullstack — React, TypeScript, .NET, open source i aplikacje mobilne.",
+  "personJobTitle": "Developer fullstack",
+  "knowsAbout": ["React", "TypeScript", "JavaScript", ".NET", "NestJS", "GraphQL", "Tailwind CSS"],
+  "sections": {
+    "about": "O mnie",
+    "contributions": "Wkład publiczny",
+    "contact": "Kontakt"
+  }
+}
