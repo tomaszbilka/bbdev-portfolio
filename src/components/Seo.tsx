@@ -17,6 +17,7 @@ const LOCALE_MAP = {
 
 const Seo = ({ section }: SeoProps) => {
   const { t, i18n } = useTranslation("seo");
+  const { t: tNotFound } = useTranslation("notFound");
   const matches = useMatches();
   const language = i18n.language.startsWith("pl") ? "pl" : "en";
   const ogLocale = LOCALE_MAP[language];
@@ -31,15 +32,19 @@ const Seo = ({ section }: SeoProps) => {
   const sectionLabel = t(`sections.${section}`);
   const title = post
     ? `${localeContent?.title} | Tomasz Bilka`
-    : section === "about"
-      ? t("defaultTitle")
-      : `${sectionLabel} | Tomasz Bilka`;
+    : section === "notFound"
+      ? "404 | Tomasz Bilka"
+      : section === "about"
+        ? t("defaultTitle")
+        : `${sectionLabel} | Tomasz Bilka`;
   const description = post
     ? localeContent?.description ?? t("defaultDescription")
-    : t("defaultDescription");
+    : section === "notFound"
+      ? tNotFound("message")
+      : t("defaultDescription");
   const canonical = post
     ? `${SITE_URL}/blog/${post.meta.slug}`
-    : section === "about"
+    : section === "about" || section === "notFound"
       ? SITE_URL
       : `${SITE_URL}/${section}`;
   const ogType = post ? "article" : "website";
@@ -82,6 +87,7 @@ const Seo = ({ section }: SeoProps) => {
       <html lang={language} />
       <title>{title}</title>
       <meta name="description" content={description} />
+      {section === "notFound" && <meta name="robots" content="noindex" />}
       <link rel="canonical" href={canonical} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />

@@ -1,0 +1,9 @@
+{
+  "title": "404 — Strona nie znaleziona",
+  "message": "Strona, której szukasz, nie istnieje lub została przeniesiona.",
+  "hint": "Spróbuj jednej z tych ścieżek:",
+  "backHome": "Wróć na stronę główną",
+  "backBlog": "Przejdź do bloga",
+  "errorTitle": "Coś poszło nie tak",
+  "errorMessage": "Wystąpił nieoczekiwany błąd. Spróbuj ponownie lub wróć na stronę główną."
+}
