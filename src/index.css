@@ -31,6 +31,23 @@
     @apply mb-4 border-l-2 border-terminal-accent pl-4 italic text-terminal-muted;
   }
 
+  .blog-content table {
+    @apply mb-4 w-full border-collapse text-sm;
+  }
+
+  .blog-content th,
+  .blog-content td {
+    @apply border border-terminal-surface px-3 py-2 text-left align-top;
+  }
+
+  .blog-content th {
+    @apply bg-terminal-surface/50 font-medium text-terminal-text;
+  }
+
+  .blog-content td {
+    @apply text-terminal-text/90;
+  }
+
   .blog-content pre {
     @apply mb-4 overflow-x-auto rounded-lg border border-terminal-surface bg-terminal-surface/50 p-4 font-mono text-sm;
   }
