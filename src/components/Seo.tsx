@@ -87,7 +87,9 @@ const Seo = ({ section }: SeoProps) => {
       <html lang={language} />
       <title>{title}</title>
       <meta name="description" content={description} />
-      {section === "notFound" && <meta name="robots" content="noindex" />}
+      {section === "notFound" && !post && (
+        <meta name="robots" content="noindex" />
+      )}
       <link rel="canonical" href={canonical} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />

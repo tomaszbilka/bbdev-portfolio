@@ -17,7 +17,7 @@ const PageLayout = ({ children }: Props) => {
     <div className="min-h-screen bg-terminal-bg text-terminal-text antialiased">
       <Seo section={section} />
       <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
-        <header className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+        <header className="sticky top-0 z-50 -mx-4 mb-12 flex flex-col gap-4 border-b border-terminal-surface/60 bg-terminal-bg/95 px-4 py-4 backdrop-blur-sm sm:-mx-6 sm:flex-row sm:items-start sm:justify-between sm:px-6 lg:-mx-8 lg:px-8">
           <TerminalNav />
           <LanguageSwitch />
         </header>

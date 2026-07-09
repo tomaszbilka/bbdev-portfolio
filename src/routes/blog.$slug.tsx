@@ -1,5 +1,4 @@
 import BlogPost from "../components/Blog/BlogPost";
-import BlogPostSkeleton from "../components/Blog/BlogPostSkeleton";
 import { getPost } from "../lib/posts.server";
 import type { Route } from "./+types/blog.$slug";
 
@@ -11,15 +10,6 @@ export async function loader({ params }: Route.LoaderArgs) {
   return post;
 }
 
-export async function clientLoader({ serverLoader }: Route.ClientLoaderArgs) {
-  return serverLoader();
-}
-clientLoader.hydrate = true as const;
-
-export function HydrateFallback() {
-  return <BlogPostSkeleton />;
-}
-
 export default function BlogPostRoute({ loaderData }: Route.ComponentProps) {
-  return <BlogPost post={loaderData} />;
+  return <BlogPost key={loaderData.meta.slug} post={loaderData} />;
 }

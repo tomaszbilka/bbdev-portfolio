@@ -2,6 +2,12 @@
   "title": "Blog",
   "subtitle": "Short notes on code, React patterns and things I find interesting.",
   "empty": "No posts yet.",
+  "noResults": "No posts match your search.",
+  "searchPlaceholder": "Search by title…",
+  "filterByTag": "Filter by tag",
+  "allTags": "All tags",
+  "selectedTagsCount": "{{count}} tags selected",
+  "clearFilters": "Clear all filters",
   "readMore": "Read more",
   "backToList": "Back to blog",
   "loading": "Loading post…"

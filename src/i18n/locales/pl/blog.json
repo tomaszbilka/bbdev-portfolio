@@ -2,6 +2,12 @@
   "title": "Blog",
   "subtitle": "Krótkie wpisy o kodzie, wzorcach React i ciekawostkach technicznych.",
   "empty": "Brak wpisów.",
+  "noResults": "Brak wpisów pasujących do wyszukiwania.",
+  "searchPlaceholder": "Szukaj po tytule…",
+  "filterByTag": "Filtruj po tagu",
+  "allTags": "Wszystkie tagi",
+  "selectedTagsCount": "{{count}} tagów wybranych",
+  "clearFilters": "Skasuj wszystkie filtry",
   "readMore": "Czytaj więcej",
   "backToList": "Wróć do bloga",
   "loading": "Ładowanie wpisu…"
